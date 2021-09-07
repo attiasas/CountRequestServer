@@ -1,0 +1,39 @@
+---
+openapi: 3.0.0
+info:
+  title: DevOps Home Assignment API
+  description: This is a API for the Home-Assignment recived from CheckPoint for the job junior DevOps engineer
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/attiasas5/DevOpsHomeAssignment/1.0.0
+  description: SwaggerHub API Auto Mocking
+tags:
+- name: Assignment
+  description: Assignment API endpoints
+paths:
+  /count:
+    get:
+      tags:
+      - Assignment
+      summary: return the the number of requests (count) recived
+      description: Request the server to return the request count until this current moment not included this request.
+      responses:
+        "200":
+          description: requests count returned
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+components:
+  schemas:
+    inline_response_200:
+      type: object
+      properties:
+        count:
+          minimum: 0
+          type: integer
+          format: int32
+          example: 152

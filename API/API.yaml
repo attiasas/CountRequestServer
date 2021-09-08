@@ -1,8 +1,8 @@
 ---
 openapi: 3.0.0
 info:
-  title: DevOps Home Assignment API
-  description: This is a API for the Home-Assignment recived from CheckPoint for the job junior DevOps engineer
+  title: Simple Counting Server
+  description: This is a API for a simple server that counts requests
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -19,7 +19,7 @@ paths:
       tags:
       - Assignment
       summary: return the the number of requests (count) recived
-      description: Request the server to return the request count until this current moment not included this request.
+      description: Request the server to return the request count until this current moment including this request.
       responses:
         "200":
           description: requests count returned
